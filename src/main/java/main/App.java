@@ -41,8 +41,13 @@ public class App {
                         if(sc.hasNext()) {
                             String pin = sc.nextLine();
                             ArrayList<String> safeFolder = newSafe.getList(pin);
+                            if(safeFolder == null) {
+                                break;
+                            } else {
+
                             for(String string : safeFolder) {
                                 System.out.println(string);
+                            }
                             }
                         }
                         break;
